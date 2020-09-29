@@ -13,7 +13,7 @@ const RichMediaMessage = require('viber-bot').Message.RichMedia;
 const KeyboardMessage = require('viber-bot').Message.Keyboard;
 
  // edit your server url here
-const serverURL = 'https://ef5f8d84b150.ngrok.io';      // 'edit with your server url here';   
+const serverURL = 'https://2d1c2344c3ad.ngrok.io';      // 'edit with your server url here';   
 // edit your bot authToken here
 const authToken = '49549e61b727d252-3877747e0b551145-97fe365e20449afc'; // 'edit with your bot token here';   
 
@@ -29,6 +29,7 @@ const port = process.env.PORT || 3000;
 //const server = https.createServer(options, app);
 app.listen(port, () => {     
     console.log(`Application running on port: ${port}`);
+    
     bot.setWebhook(`${serverURL}/endPoint`).then(()=>{console.log("setWebhook Ok.")})
     .catch(err=>console.log("err setWebhook:",err))    
  })
