@@ -29,7 +29,8 @@ const port = process.env.PORT || 3000;
 //const server = https.createServer(options, app);
 app.listen(port, () => {     
     console.log(`Application running on port: ${port}`);
-    bot.setWebhook(`${serverURL}/endPoint`).then(()=>{console.log("setWebhook Ok.")}).catch(err=>console.log("err setWebhook:",err))    
+    bot.setWebhook(`${serverURL}/endPoint`).then(()=>{console.log("setWebhook Ok.")})
+    .catch(err=>console.log("err setWebhook:",err))    
  })
 
 
@@ -169,6 +170,7 @@ bot.on(BotEvents.MESSAGE_RECEIVED, (message, response) => {
             }else{
                   var message = new TextMessage(`Sorry I dont understand!`)                  
             }
+
             bot.sendMessage(response.userProfile, message, [trackingData]).catch(err=>{console.log("err message:", err)})
         }
         if(messageType[0]=="latitude"){
