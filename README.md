@@ -4,13 +4,15 @@
 
 Navigate to this foler
 > npm install         
-> npm start 
-
+> Run ngrok with the same port for localhost which will run the viber from express, server listener
+change the serverURL from the 'cpanel.js' with ngrok webhook
+> Run the localhost/express server with 'node cpanel.js' or 'npm start'
 
 **Note**
 If a viber bot deployement is not success,
-1. check if not exist, add a script @ package.json -> 
+1. check if not exist, add a script from package.json -> 
                                 "start" : "node index.js"
+2. check the mail file from package.json -> "start" : "node index.js" is correct
 
 ### Library Prerequisites
 1.	Node >= 5.0.0
